@@ -1,6 +1,8 @@
 # Daily Machine Learning Algorithm Implementation
 
-Welcome to your daily machine learning algorithm challenge! The goal is to implement one machine learning algorithm from scratch each day. This README file serves as a progress tracker, where you can check off each algorithm once it's completed.
+The following is a walkthrough to implement a variety of machine learning algorithms from scratch. You can track your progress by checking the boxes when you've completed each algorithm. The daily schedule is tentative, and you're free to go through the walkthrough at your own pace and in any order.
+
+I've provided solutions for the algorithms, but I encourage you to fork the repository and try coding each algorithm yourself!
 
 ## Instructions
 - [ ] Start with Day 1 and work your way down the list.
@@ -95,13 +97,8 @@ Welcome to your daily machine learning algorithm challenge! The goal is to imple
 
 ---
 
-## How to Check Off an Algorithm
-- To mark an algorithm as complete, replace `[ ]` with `[x]` next to the algorithm's name.
-- Example:
-  - `[x] Day 1: Logistic Regression` (indicates Logistic Regression is completed).
-
 ## Notes
 - Feel free to document your learnings or challenges faced for each algorithm below its name for future reference.
 - Adjust the plan as needed based on your progress.
 
-Good luck, and happy coding!
+Good luck!
