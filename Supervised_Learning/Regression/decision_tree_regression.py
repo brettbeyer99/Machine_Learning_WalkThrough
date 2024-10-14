@@ -11,7 +11,7 @@ class decision_tree_regressor():
 
     def fit(self, X, y):
         self.complete_tree = self.build_tree(X,y,depth=0)
-        print(self.complete_tree)
+        # print(self.complete_tree)
         return self.complete_tree
 
     def build_tree(self, X, y, depth):
@@ -19,7 +19,7 @@ class decision_tree_regressor():
 
         if samples >= self.min_samples_split and depth < self.max_depth:
             best_feature, best_threshold, best_variance = self.best_split(X, y)
-            print(best_feature, best_threshold, best_variance)
+            # print(best_feature, best_threshold, best_variance)
 
             if best_variance > 0:
                 left_index = X[:,best_feature] <= best_threshold
