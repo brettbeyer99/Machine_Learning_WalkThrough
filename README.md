@@ -27,7 +27,7 @@ I've provided solutions for the algorithms, but I encourage you to fork the repo
 - [X] **Day 10: Lasso Regression**
 - [ ] **Day 11: Support Vector Regression (SVR)**
 - [X] **Day 12: Decision Tree (Regression)**
-- [ ] **Day 13: Random Forest (Regression)**
+- [X] **Day 13: Random Forest (Regression)**
 
 ---
 
