@@ -26,7 +26,8 @@ from sklearn.model_selection import train_test_split
 # print(f"Data saved to {output_csv}")
 
 # Load the data
-data = pd.read_csv('datasets/hours_studied.csv')
+# data = pd.read_csv('datasets/hours_studied.csv')
+data = pd.read_csv('datasets/hours_studied_extended.csv')
 
 # Split into independent and dependent variables
 X = data.iloc[:,:-1]
@@ -135,9 +136,35 @@ class logistic_regression():
         accuracy = np.sum(y_test == y_pred) / y_test.shape[0] * 100
         print("The accuracy of the model =", accuracy, "%")
 
+    def plot_sigmoid_curve(self, X, y):
+        # Convert X to a numpy array if it's not already
+        X = X.to_numpy()
+
+        # Create a range of values from min to max of X for a smooth curve
+        x_range = np.linspace(X.min(), X.max(), 300).reshape(-1, 1)
+        Z = x_range @ self.W + self.b  # Linear transformation
+        y_pred = self.sigmoid(Z)  # Sigmoid transformation for probabilities
+
+        # Plot the data points
+        plt.scatter(X, y, color='blue', label='Data points')
+
+        # Add a horizontal line at y = 0.5 as the cutoff line
+        plt.axhline(0.5, color='green', linestyle='--', label='Cutoff (0.5)')
+
+        # Plot the sigmoid curve
+        plt.plot(x_range, y_pred, color='red', label='Sigmoid curve')
+        plt.title('Sigmoid Curve for Logistic Regression')
+        plt.xlabel('Feature (e.g., Hours Studied)')
+        plt.ylabel('Probability of Positive Class')
+        plt.legend()
+        plt.grid(True)
+        plt.show()
+
+
 # Initialize and train logistic regression model
 log_regress = logistic_regression(X_train, y_train)
 log_regress.train()
 
 # Test the model on test data
 log_regress.test(X_test, y_test)
+log_regress.plot_sigmoid_curve(X_train,y_train)
